@@ -313,8 +313,8 @@
                 <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
             </div>
       
-            <div class="row justify-content-between">
-                <div class="col-md-6">
+            <div class="row justify-content-between flex-column align-items-center">
+                <!-- <div class="col-md-6">
                   <form action="send-email.php" method="POST" class="form-outline-style-v1" id="contactForm">
                     <input type="hidden" name="_next" value="https://fatehaliaamir.com">
                         <input type="hidden" name="_subject" value="New Contact Form Message">
@@ -343,20 +343,20 @@
                     </form>
                     <div id="form-message-warning" class="mt-4" style="display: none; color: red;">Something went wrong. Please try again.</div>
                     <div id="form-message-success" style="display: none; color: green;">Your message was sent, thank you!</div>
-                </div>
+                </div> -->
       
-                <div class="col-md-4">
-                    <div class="contact-info-v1">
-                        <div class="gsap-reveal d-block">
-                            <span class="d-block contact-info-label">Email</span>
-                            <a href="mailto:hello@fatehaliaamir.com" class="contact-info-val">hello@fatehaliaamir.com</a>
-                        </div>
-                        <div class="gsap-reveal d-block">
-                            <span class="d-block contact-info-label">Phone</span>
-                            <a href="tel:+923024687225" class="contact-info-val">+92 0302 4687225</a>
-                        </div>
-                    </div>
-                </div>
+                <div class="col-md-4 flex-column align-items-center">
+                  <div class="contact-info-v1 d-flex flex-column align-items-center">
+                      <div class="gsap-reveal d-block text-center">
+                          <span class="d-block contact-info-label">Email</span>
+                          <a href="mailto:hello@fatehaliaamir.com" class="contact-info-val">hello@fatehaliaamir.com</a>
+                      </div>
+                      <div class="gsap-reveal d-block text-center">
+                          <span class="d-block contact-info-label">Phone</span>
+                          <a href="tel:+923024687225" class="contact-info-val">+92 0302 4687225</a>
+                      </div>
+                  </div>
+                </div>              
             </div>
         </div>
     </div>
