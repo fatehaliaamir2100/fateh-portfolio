@@ -551,26 +551,34 @@ var contactForm = function() {
 				email: "Please enter a valid email address",
 				message: "Please enter a message"
 			},
-			errorElement: 'span',
-			errorLabelContainer: '.form-error',
 			submitHandler: function(form) {
-				$('.submitting').text('Submitting...').css('display', 'block');
+				$('.submitting').text('Submitting...').show();
 
-				// Delay for user feedback
-				setTimeout(function() {
-					$('#form-message-warning').hide();
-					$('#contactForm').fadeOut();
-					$('#form-message-success').fadeIn();
-				}, 1400);
-
-				// Submit form after delay
-				setTimeout(function() {
-					form.submit();
-				}, 1800);
+				// Use Ajax to prevent page reload
+				$.ajax({
+					type: "POST",
+					url: $(form).attr('action'),
+					data: $(form).serialize(),
+					success: function(response) {
+						if (response.trim() === 'OK') {
+							$('#form-message-warning').hide();
+							$('#contactForm').fadeOut();
+							$('#form-message-success').fadeIn();
+						} else {
+							$('#form-message-warning').html(response).fadeIn();
+						}
+						$('.submitting').hide();
+					},
+					error: function() {
+						$('#form-message-warning').html("Something went wrong. Please try again.").fadeIn();
+						$('.submitting').hide();
+					}
+				});
 			}
 		});
 	}
 };
+
 
 
 var stickyFillPlugin = function() {
