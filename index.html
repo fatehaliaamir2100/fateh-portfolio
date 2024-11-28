@@ -16,7 +16,94 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/vendor/jquery.fancybox.min.css">
     
+    <style>
+        .chatbot {
+          background-color: #121212; /* Dark background for a sleek look */
+          border: 1px solid #1e1e1e; /* Subtle border */
+          padding: 20px;
+          border-radius: 15px; /* Rounded corners for a modern feel */
+          max-width: 600px;
+          margin: 0 auto;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Subtle shadow */
+        }
 
+        #chatbox {
+          height: 300px;
+          overflow-y: auto;
+          padding: 15px;
+          border: 1px solid #1e1e1e;
+          border-radius: 10px;
+          background: #181818; /* Slightly lighter black for contrast */
+          color: #e0e0e0; /* Light text for readability */
+          font-family: 'Roboto Mono', monospace; /* Futuristic font */
+          font-size: 14px;
+          scrollbar-width: thin;
+          scrollbar-color: #444 #181818;
+        }
+
+        #chatbox::-webkit-scrollbar {
+          width: 8px;
+        }
+
+        #chatbox::-webkit-scrollbar-thumb {
+          background: #444; /* Sleek scrollbar */
+          border-radius: 5px;
+        }
+
+        #chatbox .message {
+          margin-bottom: 10px;
+        }
+
+        #chatbox .message.user {
+          text-align: right;
+          color: #4caf50; /* Futuristic green for user messages */
+          font-weight: bold;
+        }
+
+        #chatbox .message.assistant {
+          text-align: left;
+          color: #03a9f4; /* Futuristic blue for assistant messages */
+          font-weight: bold;
+        }
+
+        #chat-form {
+          display: flex;
+          margin-top: 15px;
+        }
+
+        #user-input {
+          flex: 1;
+          padding: 12px;
+          border: 1px solid #1e1e1e;
+          border-radius: 10px;
+          background-color: #1e1e1e; /* Matches the theme */
+          color: #e0e0e0;
+          font-family: 'Roboto Mono', monospace;
+          font-size: 14px;
+        }
+
+        #user-input::placeholder {
+          color: #757575; /* Subtle placeholder text */
+        }
+
+        #chat-form button {
+          padding: 12px 20px;
+          margin-left: 10px;
+          border: none;
+          background-color: #03a9f4; /* Bright blue futuristic button */
+          color: #fff;
+          border-radius: 10px;
+          cursor: pointer;
+          font-family: 'Roboto Mono', monospace;
+          font-size: 14px;
+          transition: background-color 0.3s ease;
+        }
+
+        #chat-form button:hover {
+          background-color: #0288d1; /* Darker blue on hover */
+        }
+    </style>
+    
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -134,6 +221,25 @@
                 </p>
               </p>            
             </div>
+          </div>
+        </div>
+      </div>
+
+            <!-- Chatbot Section -->
+      <div class="unslate_co--section" id="chatbot-section">
+        <div class="container">
+          <div class="section-heading-wrap text-center mb-5">
+            <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">Chat with Me</span></h2>
+          </div>
+      
+          <div class="chatbot">
+            <div id="chatbox">
+              <!-- Chat messages will appear here -->
+            </div>
+            <form id="chat-form">
+              <input type="text" id="user-input" placeholder="Type your message..." required />
+              <button type="submit">Send</button>
+            </form>
           </div>
         </div>
       </div>
@@ -335,7 +441,7 @@
                       <div class="gsap-reveal d-block text-center">
                           <span class="d-block contact-info-label">Phone</span>
                           <a href="tel:+923024687225" class="contact-info-val">+92 0302 4687225</a>
-                      </div>
+                      </div>  
                   </div>
                 </div>       
                 
@@ -417,5 +523,165 @@
             }
         });
     });
+  </script>
+
+<script>
+  // Rate limit settings
+  const MAX_REQUESTS_PER_DAY = 10;
+
+  // Get the stored request count and last request date from localStorage (or initialize them if not present)
+  let requestCount = parseInt(localStorage.getItem('requestCount')) || 0;
+  let lastRequestDate = localStorage.getItem('lastRequestDate') || null;
+
+  // Check if the user has exceeded the daily limit
+  function checkRateLimit() {
+    const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
+
+    if (lastRequestDate !== today) {
+      // Reset count if it's a new day
+      requestCount = 0;
+      lastRequestDate = today;
+      localStorage.setItem('lastRequestDate', today); // Store the date
+    }
+
+    if (requestCount >= MAX_REQUESTS_PER_DAY) {
+      throw new Error('Oops! You cannot ask any more questions today.');
+    }
+
+    // Increment request count and store it in localStorage
+    requestCount++;
+    localStorage.setItem('requestCount', requestCount);
+  }
+
+  async function fetchChatCompletion(apiKey, messages) {
+    checkRateLimit();
+
+    const apiUrl = "https://api.openai.com/v1/chat/completions";
+
+    const headers = {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${apiKey}`,
+    };
+
+    const body = {
+      model: "gpt-4o-mini-2024-07-18", // Replace with the correct model ID
+      messages: messages,
+      max_tokens: 200,
+      temperature: 0,
+    };
+
+    try {
+      const response = await fetch(apiUrl, {
+        method: "POST",
+        headers: headers,
+        body: JSON.stringify(body),
+      });
+
+      if (!response.ok) {
+        throw new Error(`API Error: ${response.status} ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      return data.choices[0].message.content;
+    } catch (error) {
+      console.error("Error fetching completion:", error.message);
+      throw error;
+    }
+  }
+
+  document.getElementById("chat-form").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const userInput = document.getElementById("user-input").value;
+    const chatbox = document.getElementById("chatbox");
+
+    // Display user message
+    const userMessage = document.createElement("div");
+    userMessage.className = "message user";
+    userMessage.textContent = userInput;
+    chatbox.appendChild(userMessage);
+
+    // Clear input field
+    document.getElementById("user-input").value = "";
+
+    // Clear any previous error messages
+    const errorMessageDiv = document.getElementById("error-message");
+    if (errorMessageDiv) {
+      errorMessageDiv.remove();
+    }
+
+    function decrypt(text, shift) {
+      return text
+        .split('')
+        .map((char) => String.fromCharCode(char.charCodeAt(0) - shift))
+        .join('');
+    }  
+
+    // Fetch response from API
+    const apiKey = decrypt("vn0surm0ZW0iJidIgX{I]Xy|YoEbh}5pn|EGyNN6EpjX|J}iPtswWF9PzFDD5wIlVuk<wTy5E:E6FvQw|3W6EoenIM<Fs[OXyvu3UMz9TUgkPHi{qwEqtd;;:NDbUNefkbKGp:M5QYSo<jfOltYi0yL|L8PoP7Tu{iPD", 3); // Replace with your actual API key
+    const messages = [
+      {
+        role: "system",
+        content: `
+          You are a helpful assistant conversing with Fateh Ali Aamir, a highly skilled Software Engineer with expertise in developing innovative AI-based and web development solutions. 
+          Here is detailed information about Fateh's background to assist with user queries effectively:
+          
+          **Contact Details**: 
+          - Email: fatehaliaamir2100@gmail.com
+          - LinkedIn: linkedin.com/in/fateh-ali-aamir
+          - GitHub: github.com/fatehaliaamir2100
+
+          **Skills**: 
+          - Programming Languages: Python, JavaScript, TypeScript, Ruby
+          - Backend Frameworks: FastAPI, Flask, Django, Node.js, Express.js, Nest.js, Fastify, Rails
+          - Databases: MySQL, PostgreSQL, MongoDB, Pinecone, Elasticsearch, AWS OpenSearch, Firebase
+          - Frontend Development: HTML, CSS, JavaScript, React.js, Tailwind CSS
+          - Generative AI: OpenAI (GPT-4, Whisper), LangChain, Ollama
+
+          **Work Experience**: 
+          - **Dubizzle Labs**: Developed RAG-based Chatbots, audio transcription systems, and backend apps using Python, TypeScript, and JavaScript.
+          - **Headstarter AI**: Built AI-powered applications, including a portfolio website and customer support agents.
+          - **Fiverr & PersonalPal AI**: Delivered freelance and contract-based AI solutions for global clients, including personalized tutors, task analyzers, and e-commerce chatbots.
+
+          **Education and Certifications**: 
+          - BS in Computer Science, National University of Computer and Emerging Sciences
+          - Certifications: Google Cloud Skills Boost (Generative AI, Large Language Models), LangChain for LLM Application Development.
+
+          Engage in a professional and informative conversation with users, providing accurate, context-aware responses based on this information.`
+      },
+      {
+        role: "user",
+        content: userInput
+      }
+    ];
+
+    try {
+      const assistantReply = await fetchChatCompletion(apiKey, messages);
+
+      // Display assistant response
+      const assistantMessage = document.createElement("div");
+      assistantMessage.className = "message assistant";
+      assistantMessage.textContent = assistantReply;
+      chatbox.appendChild(assistantMessage);
+
+      // Scroll to the latest message
+      chatbox.scrollTop = chatbox.scrollHeight;
+
+    } catch (error) {
+      console.error("Error:", error);
+
+      // Create an error message div to display on the frontend
+      const errorMessageDiv = document.createElement("div");
+      errorMessageDiv.id = "error-message";
+      errorMessageDiv.className = "message error";
+      errorMessageDiv.textContent = `${error.message}`;
+      chatbox.appendChild(errorMessageDiv);
+
+      // Optionally scroll to the latest message, even if it's an error
+      chatbox.scrollTop = chatbox.scrollHeight; 
+    }
+  });
 </script>
+
+
 </html>
