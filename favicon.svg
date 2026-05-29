@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="geometricPrecision">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect width="32" height="32" rx="7" fill="#07070f"/>
+
+  <!-- Gradient accent border -->
+  <rect x="0.75" y="0.75" width="30.5" height="30.5" rx="6.5" fill="none" stroke="url(#bg)" stroke-width="1.5" opacity="0.8"/>
+
+  <!-- F letter -->
+  <text
+    x="16"
+    y="23"
+    font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif"
+    font-size="21"
+    font-weight="900"
+    text-anchor="middle"
+    fill="url(#bg)"
+    filter="url(#glow)"
+    letter-spacing="-1"
+  >F</text>
+</svg>
