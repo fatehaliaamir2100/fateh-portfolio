@@ -1,687 +1,520 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Fateh Ali Aamir</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fateh Ali Aamir — Software Engineer | Python, Golang, AI & LLM Systems</title>
+  <meta name="description" content="Fateh Ali Aamir is a Software Engineer specializing in Python, Golang, TypeScript, LangChain, and Generative AI. Building RAG pipelines, voice agents, and scalable backend systems.">
+  <meta name="keywords" content="Software Engineer, AI Engineer, Python, FastAPI, Golang, LangChain, Generative AI, LLM, RAG, Node.js, TypeScript, NestJS, MongoDB, Kubernetes, Docker, Pakistan">
+  <meta name="author" content="Fateh Ali Aamir">
+  <meta property="og:title" content="Fateh Ali Aamir — Backend Developer & AI Engineer">
+  <meta property="og:description" content="Backend Developer and AI Engineer specializing in Python, FastAPI, LangChain, and Generative AI systems.">
+  <meta property="og:image" content="images/fateh.jpg">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://fatehaliaamir.com">
 
-    <meta name="description" content="">
-    <meta name="keywords" content="html, css, javascript, jquery">
-    <meta name="author" content="">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/vendor/icomoon/style.css">
-    <link rel="stylesheet" href="css/vendor/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/vendor/animate.min.css">
-    <link rel="stylesheet" href="css/vendor/aos.css">
-    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="css/vendor/jquery.fancybox.min.css">
-    
-    <style>
-        .chatbot {
-          background-color: #121212; /* Dark background for a sleek look */
-          border: 1px solid #1e1e1e; /* Subtle border */
-          padding: 20px;
-          border-radius: 15px; /* Rounded corners for a modern feel */
-          max-width: 600px;
-          margin: 0 auto;
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Subtle shadow */
-        }
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        #chatbox {
-          height: 300px;
-          overflow-y: auto;
-          padding: 15px;
-          border: 1px solid #1e1e1e;
-          border-radius: 10px;
-          background: #181818; /* Slightly lighter black for contrast */
-          color: #e0e0e0; /* Light text for readability */
-          font-family: 'Roboto Mono', monospace; /* Futuristic font */
-          font-size: 14px;
-          scrollbar-width: thin;
-          scrollbar-color: #444 #181818;
-        }
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body>
 
-        #chatbox::-webkit-scrollbar {
-          width: 8px;
-        }
+<!-- ============================
+     NAVIGATION
+============================= -->
+<nav id="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">Fateh<span>.</span></a>
 
-        #chatbox::-webkit-scrollbar-thumb {
-          background: #444; /* Sleek scrollbar */
-          border-radius: 5px;
-        }
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#articles">Articles</a></li>
+        <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+      </ul>
 
-        #chatbox .message {
-          margin-bottom: 10px;
-        }
+      <button class="nav-mobile-btn" id="mobile-btn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
 
-        #chatbox .message.user {
-          text-align: right;
-          color: #4caf50; /* Futuristic green for user messages */
-          font-weight: bold;
-        }
+<!-- Mobile Menu -->
+<div class="nav-mobile-menu" id="mobile-menu">
+  <button class="nav-mobile-close" id="mobile-close" aria-label="Close menu">&times;</button>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#articles">Articles</a>
+  <a href="#contact">Get in Touch</a>
+</div>
 
-        #chatbox .message.assistant {
-          text-align: left;
-          color: #03a9f4; /* Futuristic blue for assistant messages */
-          font-weight: bold;
-        }
 
-        #chat-form {
-          display: flex;
-          margin-top: 15px;
-        }
+<!-- ============================
+     HERO
+============================= -->
+<section id="hero">
+  <div class="aurora">
+    <div class="aurora-orb aurora-orb-1"></div>
+    <div class="aurora-orb aurora-orb-2"></div>
+    <div class="aurora-orb aurora-orb-3"></div>
+  </div>
+  <div class="grid-overlay"></div>
 
-        #user-input {
-          flex: 1;
-          padding: 12px;
-          border: 1px solid #1e1e1e;
-          border-radius: 10px;
-          background-color: #1e1e1e; /* Matches the theme */
-          color: #e0e0e0;
-          font-family: 'Roboto Mono', monospace;
-          font-size: 14px;
-        }
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Available for new opportunities
+      </div>
 
-        #user-input::placeholder {
-          color: #757575; /* Subtle placeholder text */
-        }
+      <h1 class="hero-name gradient-text">Fateh Ali Aamir</h1>
 
-        #chat-form button {
-          padding: 12px 20px;
-          margin-left: 10px;
-          border: none;
-          background-color: #03a9f4; /* Bright blue futuristic button */
-          color: #fff;
-          border-radius: 10px;
-          cursor: pointer;
-          font-family: 'Roboto Mono', monospace;
-          font-size: 14px;
-          transition: background-color 0.3s ease;
-        }
+      <p class="hero-title">
+        <span id="typed-text"></span><span id="cursor"></span>
+      </p>
 
-        #chat-form button:hover {
-          background-color: #0288d1; /* Darker blue on hover */
-        }
-    </style>
-    
-    <!-- Theme Style -->
-    <link rel="stylesheet" href="css/style.css">
+      <p class="hero-bio">
+        Software Engineer building intelligent, scalable systems across Python, Golang, and TypeScript —
+        from LLM-powered RAG pipelines and voice agents to logistics integrations and cloud-deployed APIs.
+      </p>
 
-  </head>
-  <body data-spy="scroll" data-target=".site-nav-target" data-offset="200">
-
-    <nav class="unslate_co--site-mobile-menu">
-      <div class="close-wrap d-flex">
-        <a href="#" class="d-flex ml-auto js-menu-toggle">
-          <span class="close-label">Close</span>
-          <div class="close-times">
-            <span class="bar1"></span>
-            <span class="bar2"></span>
-          </div>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fa-solid fa-layer-group"></i> View Projects
+        </a>
+        <a href="./assets/Fateh-Resume-2026.pdf" target="_blank" class="btn btn-outline">
+          <i class="fa-solid fa-arrow-down"></i> Download CV
         </a>
       </div>
-      <div class="site-mobile-inner"></div>
-    </nav>
-
-
-    <div class="unslate_co--site-wrap">
-
-      <div class="unslate_co--site-inner">
-
-        <div class="lines-wrap">
-          <div class="lines-inner">
-            <div class="lines"></div>
-          </div>
-        </div>
-        <!-- END lines -->
-      
-      <nav class="unslate_co--site-nav site-nav-target">
-
-        <div class="container">
-        
-          <div class="row align-items-center justify-content-between text-left">
-            <div class="col-md-5 text-right">
-              <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
-                <li><a href="#home-section" class="nav-link">Home</a></li>
-                <li><a href="#about-section" class="nav-link">About</a></li>
-                <li><a href="#services-section" class="nav-link">Skills</a></li>
-                <li><a href="#contact-section" class="nav-link">Contact</a></li>
-              </ul>
-            </div>
-            <div class="site-logo pos-absolute">
-              <a href="index.html" class="unslate_co--site-logo">Fateh Ali Aamir<span>.</span></a>
-            </div>
-            <div class="col-md-5 text-right text-lg-left">
-              <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
-                <li><a href="#journal-section" class="nav-link">Blog</a></li>
-                <li><a href="https://www.linkedin.com/in/fateh-ali-aamir/" target="_blank" class="nav-link">Linkedin</a></li>
-                <li><a href="https://github.com/fatehaliaamir2100" target="_blank" class="nav-link">Github</a></li>
-              </ul>
-
-              <ul class="site-nav-ul-none-onepage text-right d-inline-block d-lg-none">
-                <li><a href="#" class="js-menu-toggle">Menu</a></li>
-              </ul>
-
-            </div>
-          </div>
-        </div>
-
-      </nav>
-      <!-- END nav -->
-
-      <div class="cover-v1 jarallax" style="background-image: url('images/space.jpg');" id="home-section">
-        <div class="container">
-          <div class="row align-items-center">
-              
-            <div class="col-md-7 mx-auto text-center">
-              <h1 class="heading gsap-reveal-hero">Fateh Ali Aamir</h1>
-              <h2 class="subheading gsap-reveal-hero">Backend Developer, System Designer, Generative AI Enthusiast</h2>
-            </div>
-
-          </div>
-        </div>
-
-
-        <a href="#portfolio-section" class="mouse-wrap smoothscroll">
-          <span class="mouse">
-            <span class="scroll"></span>
-          </span>
-          <span class="mouse-label">Scroll</span>
-        </a>
-
-      </div>
-      <!-- END .cover-v1 -->
-
-      <div class="unslate_co--section" id="about-section">
-        <div class="container">
-          
-          <div class="section-heading-wrap text-center mb-5">
-            <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">About Me</span></h2>
-            <span class="gsap-reveal">
-            <img src="images/divider.png" alt="divider" width="76">
-            </span>
-          </div>
-          
-
-          <div class="row mt-5 justify-content-between">
-            <div class="col-lg-7 mb-5 mb-lg-0">
-              <figure class="dotted-bg gsap-reveal-img ">
-                <img src="images/fateh.jpg" alt="Image" class="img-fluid">
-              </figure>
-            </div>
-            <div class="col-lg-4 pr-lg-5">
-              <h3 class="mb-4 heading-h3"><span class="gsap-reveal">Vision To Reality</span></h3>
-              <p class="lead gsap-reveal">A passionate technologist and innovative problem-solver, I architect robust systems at the intersection of AI and web development, bringing technical expertise and creative thinking to transform complex challenges into elegant, cutting-edge solutions.</p>              
-              <p class="mb-4 gsap-reveal">Let's collaborate to turn your ambitious ideas into powerful, scalable solutions that make a real impact in the digital world.</p>
-              <p class="gsap-reveal">
-                <p class="gsap-reveal">
-                  <p class="gsap-reveal">
-                    <a href="./assets/resume.pdf" target="_blank" class="btn btn-outline-pill btn-custom-light">Download my CV</a>
-                  </p>
-                </p>
-              </p>            
-            </div>
-          </div>
-        </div>
-      </div>
-
-            <!-- Chatbot Section -->
-      <div class="unslate_co--section" id="chatbot-section">
-        <div class="container">
-          <div class="section-heading-wrap text-center mb-5">
-            <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">Chat with Me</span></h2>
-          </div>
-      
-          <div class="chatbot">
-            <div id="chatbox">
-              <!-- Chat messages will appear here -->
-            </div>
-            <form id="chat-form">
-              <input type="text" id="user-input" placeholder="Type your message..." required />
-              <button type="submit">Send</button>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <div class="unslate_co--section" id="services-section">
-        <div class="container">
-
-          <div class="section-heading-wrap text-center mb-5">
-            <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">My Skills</span></h2>
-          </div>
-
-          <div class="row gutter-v3">
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
-                <div class="wrap-icon mb-3">
-                  <img src="images/svg/001-options.svg" alt="Image" width="45">
-                </div>
-                <h3>Generative <br> AI</h3>
-                <p>Harnessing the power of AI to generate novel and creative content. </p>
-              </div> 
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
-                <div class="wrap-icon mb-3">
-                  <img src="images/svg/002-chat.svg" alt="Icon" width="45">
-                </div>
-                <h3>Backend <br> Development</h3>
-                <p>Crafting the server-side logic and functionality that powers web and mobile applications. </p>
-              </div> 
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
-                <div class="wrap-icon mb-3">
-                  <img src="images/svg/003-contact-book.svg" alt="Image" class="img-fluid" width="45">
-                </div>
-                <h3>Python <br> FastAPI</h3>
-                <p>A modern, fast (high-performance), web framework for building APIs with Python. </p>
-              </div> 
-            </div>
-
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
-                <div class="wrap-icon mb-3">
-                  <img src="images/svg/004-percentage.svg" alt="Image" width="45">
-                </div>
-                <h3>Javascript <br> Typescript</h3>
-                <p>The dynamic languages powering interactive web experiences and robust software applications. </p>
-              </div> 
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
-                <div class="wrap-icon mb-3">
-                  <img src="images/svg/006-goal.svg" alt="Image" width="45">
-                </div>
-                <h3>Node <br> Express</h3>
-                <p>A fast and minimalist web application framework for Node.js, enabling efficient server-side development. </p>
-              </div> 
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
-                <div class="wrap-icon mb-3">
-                  <img src="images/svg/005-line-chart.svg" alt="Image" width="45">
-                </div>
-                <h3>System <br> Design </h3>
-                <p>The art of architecting complex systems to meet functional and non-functional requirements.   </p>
-              </div> 
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="unslate_co--section" id="journal-section">
-        <div class="container">
-          <div class="section-heading-wrap text-center mb-5">
-            <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">My Blog</span></h2>
-            <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
-          </div>
-
-          
-          <div class="row gutter-v4 align-items-stretch">
-            <div class="col-sm-6 col-md-6 col-lg-8 blog-post-entry" data-aos="fade-up" data-aos-delay="0">
-
-              <a href="https://medium.com/p/478df619218e" target="_blank" class="grid-item blog-item w-100 h-100">
-                <div class="overlay">
-                  <div class="portfolio-item-content">
-                    <h3>How to Set up a Free (Local) Generative AI Application</h3>
-                    <p class="post-meta">By Fateh Ali Aamir <span class="small">&bullet;</span> 3 mins read</p>
-                  </div>
-                </div>
-                <img src="images/article_1.webp" class="lazyload" alt="Image" />
-              </a>
-
-
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-4 blog-post-entry" data-aos="fade-up" data-aos-delay="100">
-              <a href="https://medium.com/p/9974cfc0e328" target="_blank" class="grid-item blog-item w-100 h-100">
-                <div class="overlay">
-                  <div class="portfolio-item-content">
-                    <h3>A Multi-Layer RAG Chatbot with LangChain’s SQL Agent and MySQL</h3>
-                    <p class="post-meta">By Fateh Ali Aamir <span class="small">&bullet;</span> 5 mins read</p>
-                  </div>
-                </div>
-                <img src="images/article_2.webp" class="lazyload" alt="Image" />
-              </a>
-            </div>
-
-
-            <div class="col-sm-6 col-md-6 col-lg-4 blog-post-entry" data-aos="fade-up" data-aos-delay="0">
-
-              <a href="https://medium.com/p/06de61af8e88" target="_blank" class="grid-item blog-item w-100 h-100">
-                <div class="overlay">
-                  <div class="portfolio-item-content">
-                    <h3>Using the OpenAI Assistant API</h3>
-                    <p class="post-meta">By Fateh Ali Aamir <span class="small">&bullet;</span> 4 mins read</p>
-                  </div>
-                </div>
-                <img src="images/article_3.webp" class="lazyload" alt="Image" />
-              </a>
-
-
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-4 blog-post-entry" data-aos="fade-up" data-aos-delay="100">
-              <a href="https://medium.com/p/e4211cca45a4" target="_blank" class="grid-item blog-item w-100 h-100">
-                <div class="overlay">
-                  <div class="portfolio-item-content">
-                    <h3>Using Streamlit to Build a Production-Ready Llama 3 Chatbot</h3>
-                    <p class="post-meta">By Fateh Ali Aamir <span class="small">&bullet;</span> 5 mins read</p>
-                  </div>
-                </div>
-                <img src="images/article_4.webp" class="lazyload" alt="Image" />
-              </a>
-            </div>
-
-            <div class="col-sm-6 col-md-6 col-lg-4 blog-post-entry" data-aos="fade-up" data-aos-delay="200">
-              <a href="https://medium.com/p/f62003afbdab" target="_blank" class="grid-item blog-item w-100 h-100">
-                <div class="overlay">
-                  <div class="portfolio-item-content">
-                    <h3>A RAG Chatbot Powered by Claude 3 Haiku and MongoDB Atlas in Node.js</h3>
-                    <p class="post-meta">By Fateh Ali Aamir <span class="small">&bullet;</span> 5 mins read</p>
-                  </div>
-                </div>
-                <img src="images/article_5.webp" class="lazyload" alt="Image" />
-              </a>
-            </div>
-
-
-          </div>
-
-        </div>
-      </div>
-      <!-- END blog posts -->
-
-      <div class="unslate_co--section" id="contact-section">
-        <div class="container">
-            <div class="section-heading-wrap text-center mb-5">
-                <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">Get In Touch</span></h2>
-                <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
-            </div>
-      
-            <div class="row justify-content-between flex-column align-items-center">
-                <!-- <div class="col-md-6">
-                  <form action="send-email.php" method="POST" class="form-outline-style-v1" id="contactForm">
-                    <input type="hidden" name="_next" value="https://fatehaliaamir.com">
-                        <input type="hidden" name="_subject" value="New Contact Form Message">
-                        <input type="hidden" name="_template" value="table">
-                        
-                        <div class="form-group row mb-0">
-                            <div class="col-lg-6 form-group gsap-reveal">
-                                <label for="name">Name</label>
-                                <input name="name" type="text" class="form-control" id="name" required>
-                            </div>
-                            <div class="col-lg-6 form-group gsap-reveal">
-                                <label for="email">Email</label>
-                                <input name="email" type="email" class="form-control" id="email" required>
-                            </div>
-                            <div class="col-lg-12 form-group gsap-reveal">
-                                <label for="message">Write your message...</label>
-                                <textarea name="message" id="message" cols="30" rows="7" class="form-control" required></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group row gsap-reveal">
-                            <div class="col-md-12 d-flex align-items-center">
-                                <input type="submit" class="btn btn-outline-pill btn-custom-light mr-3" value="Send Message">
-                                <span class="submitting" style="display: none;"></span>
-                            </div>
-                        </div>
-                    </form>
-                    <div id="form-message-warning" class="mt-4" style="display: none; color: red;">Something went wrong. Please try again.</div>
-                    <div id="form-message-success" style="display: none; color: green;">Your message was sent, thank you!</div>
-                </div> -->
-      
-                <div class="col-md-4 flex-column align-items-center">
-                  <div class="contact-info-v1 d-flex flex-column align-items-center">
-                      <div class="gsap-reveal d-block text-center">
-                          <span class="d-block contact-info-label">Email</span>
-                          <a href="mailto:fatehaliaamir2100@gmail.com" class="contact-info-val">hello@fatehaliaamir.com</a>
-                      </div>
-                      <div class="gsap-reveal d-block text-center">
-                          <span class="d-block contact-info-label">Phone</span>
-                          <a href="tel:+923024687225" class="contact-info-val">+92 0302 4687225</a>
-                      </div>  
-                  </div>
-                </div>       
-                
-                <div class="col-md-6 mt-4">
-                  <div id="schedule">
-                      <script
-                          type="text/javascript"
-                          src="https://assets.calendly.com/assets/external/widget.js"
-                          async
-                      ></script>
-                      <div
-                          class="calendly-inline-widget"
-                          data-url="https://calendly.com/fatehaliaamir2100"
-                          style="min-width:320px; height:630px;"
-                      ></div>
-                  </div>
-              </div>
-            </div>
-        </div>
     </div>
-    
-      </div> <!-- END .unslate_co-site-inner -->
+  </div>
 
-      <footer class="unslate_co--footer unslate_co--section">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-7">
-              
-              <div class="footer-site-logo"><a href="#">Fateh Ali Aamir<span>.</span></a></div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
 
-              <ul class="footer-site-social">
-                <li><a href="https://www.linkedin.com/in/fateh-ali-aamir/" target="_blank">Linkedin</a></li>
-                <li><a href="https://github.com/fatehaliaamir2100" target="_blank">Github</a></li>
 
-              </ul>
+<!-- ============================
+     ABOUT
+============================= -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
 
-            </div>
+      <div class="about-img-wrap reveal">
+        <div class="about-img-bg"></div>
+        <div class="about-img-border"></div>
+        <img src="images/fateh.jpg" alt="Fateh Ali Aamir">
+      </div>
+
+      <div class="about-content">
+        <span class="section-label reveal">About Me</span>
+        <h2 class="section-title reveal reveal-delay-1">Shipping Intelligent Systems That Scale</h2>
+
+        <p class="reveal reveal-delay-2">
+          I'm a <strong style="color:var(--text)">Software Engineer</strong> with 3+ years of experience building production-grade backend systems and AI-powered applications across Python, TypeScript, and Golang. I specialise in <strong style="color:var(--text)">LLM integrations, RAG pipelines, and high-performance APIs</strong> — from design to deployment.
+        </p>
+        <p class="reveal reveal-delay-2">
+          At <strong style="color:var(--text)">Shiptimize Inc.</strong>, I integrate logistics and e-commerce platforms across Europe. Previously at <strong style="color:var(--text)">Dubizzle Labs</strong>, I shipped RAG chatbots, a real-time voice agent with OpenAI's Realtime API, and an audio transcription system using Whisper V3 — deployed on Kubernetes with ArgoCD.
+        </p>
+
+        <div class="about-stats reveal reveal-delay-3">
+          <div class="stat">
+            <span class="stat-number">3+</span>
+            <span class="stat-label">Years Exp.</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">15+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">10+</span>
+            <span class="stat-label">Articles</span>
           </div>
         </div>
-      </footer>
 
-      
+        <div class="hero-actions reveal reveal-delay-4">
+          <a href="#contact" class="btn btn-primary">
+            <i class="fa-regular fa-calendar"></i> Let's Talk
+          </a>
+          <a href="https://www.linkedin.com/in/fateh-ali-aamir/" target="_blank" class="btn btn-outline">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/fatehaliaamir2100" target="_blank" class="btn btn-outline">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+
     </div>
+  </div>
+</section>
 
-    
-    <!-- Loader -->
-    <div id="unslate_co--overlayer"></div>
-    <div class="site-loader-wrap">
-      <div class="site-loader"></div>
+
+<!-- ============================
+     SKILLS
+============================= -->
+<section id="skills">
+  <div class="container">
+    <span class="section-label reveal">What I Do</span>
+    <h2 class="section-title reveal reveal-delay-1">Core Skills</h2>
+    <p style="color:var(--text-muted);max-width:540px;" class="reveal reveal-delay-2">
+      A focused stack built for building intelligent, production-grade systems — from model
+      integration to scalable API infrastructure.
+    </p>
+
+    <div class="skills-grid">
+
+      <div class="skill-card reveal">
+        <div class="skill-icon ic-ai">🤖</div>
+        <h3>AI &amp; LLM Engineering</h3>
+        <p>Building production RAG pipelines, voice agents, and LLM-powered applications using the latest models and orchestration frameworks.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">LangChain</span>
+          <span class="skill-tag">OpenAI GPT-4</span>
+          <span class="skill-tag">Claude</span>
+          <span class="skill-tag">Whisper</span>
+          <span class="skill-tag">HuggingFace</span>
+          <span class="skill-tag">Mistral</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-icon ic-python">🐍</div>
+        <h3>Python</h3>
+        <p>My primary backend language — from high-throughput async APIs and AI microservices to data processing and automation scripts.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">Pydantic</span>
+          <span class="skill-tag">SQLAlchemy</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">OpenCV</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="skill-icon ic-js">⚡</div>
+        <h3>JavaScript / TypeScript</h3>
+        <p>Full backend coverage with typed Node.js frameworks — from real-time APIs and webhooks to complex e-commerce integrations.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Nest.js</span>
+          <span class="skill-tag">Fastify</span>
+          <span class="skill-tag">Express</span>
+          <span class="skill-tag">React.js</span>
+          <span class="skill-tag">Sequelize</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon ic-node">🐹</div>
+        <h3>Golang</h3>
+        <p>Building high-performance services and gRPC APIs in Go — fast, concurrent, and built for the demands of modern backend infrastructure.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Gin</span>
+          <span class="skill-tag">gRPC</span>
+          <span class="skill-tag">Go Modules</span>
+          <span class="skill-tag">Go Testing</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-icon ic-backend">🗄️</div>
+        <h3>Databases</h3>
+        <p>Comfortable across relational, document, vector, and search databases — choosing the right engine for the job, at scale.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">Pinecone</span>
+          <span class="skill-tag">OpenSearch</span>
+          <span class="skill-tag">Elasticsearch</span>
+          <span class="skill-tag">Firebase</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="skill-icon ic-design">☁️</div>
+        <h3>DevOps &amp; Cloud</h3>
+        <p>Containerised deployments, CI/CD pipelines, and cloud infrastructure — from local Docker setups to Kubernetes clusters on AWS.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Kubernetes</span>
+          <span class="skill-tag">AWS EC2/S3</span>
+          <span class="skill-tag">ArgoCD</span>
+          <span class="skill-tag">GitHub Actions</span>
+          <span class="skill-tag">RabbitMQ</span>
+          <span class="skill-tag">Redis</span>
+        </div>
+      </div>
+
     </div>
-
-    <script src="js/scripts-dist.js"></script>
-    <script src="js/main.js"></script>
-
-    
-  </body>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const downloadButton = document.getElementById('downloadCV');
-        
-        downloadButton.addEventListener('click', async function(e) {
-            e.preventDefault();
-            
-            try {
-                const response = await fetch('./assets/resume.pdf');
-                const blob = await response.blob();
-                const url = window.URL.createObjectURL(blob);
-                const link = document.createElement('a');
-                link.href = url;
-                link.download = 'resume.pdf';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                window.URL.revokeObjectURL(url);
-            } catch (error) {
-                console.error('Error downloading file:', error);
-                alert('Download failed. Please try again.');
-            }
-        });
-    });
-  </script>
-
-<script>
-  // Rate limit settings
-  const MAX_REQUESTS_PER_DAY = 10;
-
-  // Get the stored request count and last request date from localStorage (or initialize them if not present)
-  let requestCount = parseInt(localStorage.getItem('requestCount')) || 0;
-  let lastRequestDate = localStorage.getItem('lastRequestDate') || null;
-
-  // Check if the user has exceeded the daily limit
-  function checkRateLimit() {
-    const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
-
-    if (lastRequestDate !== today) {
-      // Reset count if it's a new day
-      requestCount = 0;
-      lastRequestDate = today;
-      localStorage.setItem('lastRequestDate', today); // Store the date
-    }
-
-    if (requestCount >= MAX_REQUESTS_PER_DAY) {
-      throw new Error("Oops! You cannot ask any more questions today. Scroll down and schedule a meeting with me if you want to talk more.");
-    }
-
-    // Increment request count and store it in localStorage
-    requestCount++;
-    localStorage.setItem('requestCount', requestCount);
-  }
-
-  async function fetchChatCompletion(apiKey, messages) {
-    checkRateLimit();
-
-    const apiUrl = "https://api.openai.com/v1/chat/completions";
-
-    const headers = {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${apiKey}`,
-    };
-
-    const body = {
-      model: "gpt-4o-mini-2024-07-18", // Replace with the correct model ID
-      messages: messages,
-      max_tokens: 200,
-      temperature: 0,
-    };
-
-    try {
-      const response = await fetch(apiUrl, {
-        method: "POST",
-        headers: headers,
-        body: JSON.stringify(body),
-      });
-
-      if (!response.ok) {
-        throw new Error(`API Error: ${response.status} ${response.statusText}`);
-      }
-
-      const data = await response.json();
-      return data.choices[0].message.content;
-    } catch (error) {
-      console.error("Error fetching completion:", error.message);
-      throw error;
-    }
-  }
-
-  document.getElementById("chat-form").addEventListener("submit", async function (e) {
-    e.preventDefault();
-
-    const userInput = document.getElementById("user-input").value;
-    const chatbox = document.getElementById("chatbox");
-
-    // Display user message
-    const userMessage = document.createElement("div");
-    userMessage.className = "message user";
-    userMessage.textContent = userInput;
-    chatbox.appendChild(userMessage);
-
-    // Clear input field
-    document.getElementById("user-input").value = "";
-
-    // Clear any previous error messages
-    const errorMessageDiv = document.getElementById("error-message");
-    if (errorMessageDiv) {
-      errorMessageDiv.remove();
-    }
-
-    function decrypt(text, shift) {
-      return text
-        .split('')
-        .map((char) => String.fromCharCode(char.charCodeAt(0) - shift))
-        .join('');
-    }  
-
-    // Fetch response from API
-    const apiKey = decrypt("vn0surm0ZW0iJidIgX{I]Xy|YoEbh}5pn|EGyNN6EpjX|J}iPtswWF9PzFDD5wIlVuk<wTy5E:E6FvQw|3W6EoenIM<Fs[OXyvu3UMz9TUgkPHi{qwEqtd;;:NDbUNefkbKGp:M5QYSo<jfOltYi0yL|L8PoP7Tu{iPD", 3); // Replace with your actual API key
-    const messages = [
-      {
-        role: "system",
-        content: `
-          You are a helpful assistant conversing with Fateh Ali Aamir, a highly skilled Software Engineer with expertise in developing innovative AI-based and web development solutions. 
-          Here is detailed information about Fateh's background to assist with user queries effectively:
-          
-          **Contact Details**: 
-          - Email: fatehaliaamir2100@gmail.com
-          - LinkedIn: linkedin.com/in/fateh-ali-aamir
-          - GitHub: github.com/fatehaliaamir2100
-
-          **Skills**: 
-          - Programming Languages: Python, JavaScript, TypeScript, Ruby
-          - Backend Frameworks: FastAPI, Flask, Django, Node.js, Express.js, Nest.js, Fastify, Rails
-          - Databases: MySQL, PostgreSQL, MongoDB, Pinecone, Elasticsearch, AWS OpenSearch, Firebase
-          - Frontend Development: HTML, CSS, JavaScript, React.js, Tailwind CSS
-          - Generative AI: OpenAI (GPT-4, Whisper), LangChain, Ollama
-
-          **Work Experience**: 
-          - **Dubizzle Labs**: Developed RAG-based Chatbots, audio transcription systems, and backend apps using Python, TypeScript, and JavaScript.
-          - **Headstarter AI**: Built AI-powered applications, including a portfolio website and customer support agents.
-          - **Fiverr & PersonalPal AI**: Delivered freelance and contract-based AI solutions for global clients, including personalized tutors, task analyzers, and e-commerce chatbots.
-
-          **Education and Certifications**: 
-          - BS in Computer Science, National University of Computer and Emerging Sciences
-          - Certifications: Google Cloud Skills Boost (Generative AI, Large Language Models), LangChain for LLM Application Development.
-
-          Engage in a professional and informative conversation with users, providing accurate, context-aware responses based on this information.`
-      },
-      {
-        role: "user",
-        content: userInput
-      }
-    ];
-
-    try {
-      const assistantReply = await fetchChatCompletion(apiKey, messages);
-
-      // Display assistant response
-      const assistantMessage = document.createElement("div");
-      assistantMessage.className = "message assistant";
-      assistantMessage.textContent = assistantReply;
-      chatbox.appendChild(assistantMessage);
-
-      // Scroll to the latest message
-      chatbox.scrollTop = chatbox.scrollHeight;
-
-    } catch (error) {
-      console.error("Error:", error);
-
-      // Create an error message div to display on the frontend
-      const errorMessageDiv = document.createElement("div");
-      errorMessageDiv.id = "error-message";
-      errorMessageDiv.className = "message error";
-      errorMessageDiv.textContent = `${error.message}`;
-      chatbox.appendChild(errorMessageDiv);
-
-      // Optionally scroll to the latest message, even if it's an error
-      chatbox.scrollTop = chatbox.scrollHeight; 
-    }
-  });
-</script>
+  </div>
+</section>
 
 
+<!-- ============================
+     PROJECTS
+============================= -->
+<section id="projects">
+  <div class="container">
+    <span class="section-label reveal">What I've Built</span>
+    <h2 class="section-title reveal reveal-delay-1">Projects</h2>
+    <p style="color:var(--text-muted);max-width:540px;" class="reveal reveal-delay-2">
+      A selection of systems and tools I've shipped — from AI-powered chatbots to
+      production-grade API services.
+    </p>
+
+    <div class="projects-grid">
+
+      <div class="project-card reveal">
+        <div class="project-header">
+          <div class="project-icon" style="background:rgba(99,102,241,0.15);color:#818cf8;">🎯</div>
+          <div class="project-links">
+            <a href="https://github.com/fatehaliaamir2100/Job-Application-Tracker" target="_blank" class="project-link" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <h3>AI Job Application Tracker</h3>
+        <p>Privacy-first job tracker that monitors your Gmail with local Ollama models — zero cloud AI costs. Auto-classifies applications, interviews, rejections and flags ghosts with no response in 14+ days.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">Ollama</span>
+          <span class="tech-tag">Gmail API</span>
+          <span class="tech-tag">SQLite</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-header">
+          <div class="project-icon" style="background:rgba(34,211,238,0.12);color:#22d3ee;">🚀</div>
+          <div class="project-links">
+            <a href="https://github.com/fatehaliaamir2100/gitstring" target="_blank" class="project-link" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <h3>GitString — AI Changelog Generator</h3>
+        <p>A micro-SaaS that transforms Git commits into professional changelogs using OpenAI or local Ollama. Supports GitHub and GitLab, multiple export formats, and shareable public/private links.</p>
+        <div class="project-tech">
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Next.js</span>
+          <span class="tech-tag">Supabase</span>
+          <span class="tech-tag">OpenAI</span>
+          <span class="tech-tag">GitHub API</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-header">
+          <div class="project-icon" style="background:rgba(168,85,247,0.15);color:#c084fc;">🤖</div>
+          <div class="project-links">
+            <a href="https://fatehaliaamir.medium.com/a-multi-layer-rag-chatbot-with-langchains-sql-agent-and-mysql-9974cfc0e328" target="_blank" class="project-link" title="Article">
+              <i class="fa-brands fa-medium"></i>
+            </a>
+            <a href="https://github.com/fatehaliaamir2100/SQL-Agent-with-DB" target="_blank" class="project-link" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <h3>SQL Agent with Vector Context</h3>
+        <p>Converts natural language into SQL queries using LangChain agents with Pinecone for context-aware retrieval. Includes web scraping integration and department-based data isolation via separate vector indexes.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">LangChain</span>
+          <span class="tech-tag">Pinecone</span>
+          <span class="tech-tag">MySQL</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-header">
+          <div class="project-icon" style="background:rgba(34,197,94,0.12);color:#4ade80;">🍃</div>
+          <div class="project-links">
+            <a href="https://fatehaliaamir.medium.com/a-rag-chatbot-powered-by-claude-3-haiku-and-mongodb-atlas-in-node-js-f62003afbdab" target="_blank" class="project-link" title="Article">
+              <i class="fa-brands fa-medium"></i>
+            </a>
+            <a href="https://github.com/fatehaliaamir2100/RAG-Chatbot-Nodejs" target="_blank" class="project-link" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <h3>RAG Chatbot — Node.js + Claude</h3>
+        <p>Production RAG system using Claude 3 Haiku with MongoDB Atlas vector search and OpenAI embeddings. Clean RESTful API, flexible data ingestion, and semantically aware document retrieval.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">Claude API</span>
+          <span class="tech-tag">MongoDB Atlas</span>
+          <span class="tech-tag">OpenAI</span>
+          <span class="tech-tag">Vector Search</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================
+     ARTICLES
+============================= -->
+<section id="articles">
+  <div class="container">
+    <span class="section-label reveal">Writing</span>
+    <h2 class="section-title reveal reveal-delay-1">Articles</h2>
+    <p style="color:var(--text-muted);max-width:540px;" class="reveal reveal-delay-2">
+      I write about AI engineering, backend systems, and practical tutorials on
+      building with LLMs.
+    </p>
+
+    <div class="articles-grid">
+
+      <!-- Featured: spans 2 cols -->
+      <a href="https://fatehaliaamir.medium.com/how-to-set-up-a-free-local-generative-ai-application-478df619218e" target="_blank" class="article-card article-featured reveal">
+        <img src="images/article_1.webp" alt="How to Set up a Free Local Generative AI Application" class="article-img">
+        <div class="article-body">
+          <span class="article-meta">Generative AI &bull; Tutorial</span>
+          <h3>How to Set up a Free (Local) Generative AI Application</h3>
+          <span class="article-read">3 min read</span>
+        </div>
+      </a>
+
+      <a href="https://fatehaliaamir.medium.com/a-multi-layer-rag-chatbot-with-langchains-sql-agent-and-mysql-9974cfc0e328" target="_blank" class="article-card reveal reveal-delay-1">
+        <img src="images/article_2.webp" alt="A Multi-Layer RAG Chatbot with LangChain SQL Agent and MySQL" class="article-img">
+        <div class="article-body">
+          <span class="article-meta">LangChain &bull; RAG &bull; MySQL</span>
+          <h3>A Multi-Layer RAG Chatbot with LangChain's SQL Agent and MySQL</h3>
+          <span class="article-read">5 min read</span>
+        </div>
+      </a>
+
+      <a href="https://fatehaliaamir.medium.com/from-claude-code-to-claw-code-c0d62e58e96a" target="_blank" class="article-card reveal">
+        <img src="images/article-3.webp" alt="From Claude Code to Claw Code" class="article-img">
+        <div class="article-body">
+          <span class="article-meta">AI Tools &bull; Opinion</span>
+          <h3>From Claude Code to "Claw Code"</h3>
+          <span class="article-read">3 min read</span>
+        </div>
+      </a>
+
+      <a href="https://fatehaliaamir.medium.com/use-perplexity-api-to-build-an-intelligent-calorie-tracker-47092ba2546a" target="_blank" class="article-card reveal reveal-delay-1">
+        <img src="images/article-4.webp" alt="Use Perplexity API to Build an Intelligent Calorie Tracker" class="article-img">
+        <div class="article-body">
+          <span class="article-meta">Perplexity API &bull; Tutorial</span>
+          <h3>Use Perplexity API to Build an Intelligent Calorie Tracker</h3>
+          <span class="article-read">3 min read</span>
+        </div>
+      </a>
+
+      <a href="https://fatehaliaamir.medium.com/building-a-robust-routing-system-with-openrouteservice-ors-dc6175268980" target="_blank" class="article-card reveal reveal-delay-2">
+        <img src="images/article-5.webp" alt="Building a Robust Routing System with OpenRouteService ORS" class="article-img">
+        <div class="article-body">
+          <span class="article-meta">Backend &bull; Geospatial</span>
+          <h3>Building a Robust Routing System with OpenRouteService (ORS)</h3>
+          <span class="article-read">3 min read</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================
+     CONTACT
+============================= -->
+<section id="contact">
+  <div class="container">
+    <span class="section-label reveal">Let's Connect</span>
+    <h2 class="section-title reveal reveal-delay-1">Get In Touch</h2>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3 class="reveal reveal-delay-2">Have a project in mind?</h3>
+        <p class="reveal reveal-delay-2">
+          Whether you want to build something new, need technical advice, or just want
+          to say hi — my inbox is always open. Pick a channel below or book a slot
+          directly on my calendar.
+        </p>
+
+        <div class="contact-cards">
+          <a href="mailto:fatehaliaamir2100@gmail.com" class="contact-card reveal reveal-delay-2">
+            <div class="contact-card-icon ic-email">
+              <i class="fa-regular fa-envelope"></i>
+            </div>
+            <div class="contact-card-text">
+              <span class="contact-card-label">Email</span>
+              <span class="contact-card-val">hello@fatehaliaamir.com</span>
+            </div>
+            <i class="fa-solid fa-arrow-right contact-arrow"></i>
+          </a>
+
+          <a href="https://wa.me/923024687225" target="_blank" class="contact-card reveal reveal-delay-3">
+            <div class="contact-card-icon ic-wa">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="contact-card-text">
+              <span class="contact-card-label">WhatsApp</span>
+              <span class="contact-card-val">+92 302 4687225</span>
+            </div>
+            <i class="fa-solid fa-arrow-right contact-arrow"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="calendly-wrap reveal reveal-delay-2">
+        <div
+          class="calendly-inline-widget"
+          data-url="https://calendly.com/fatehaliaamir2100"
+          style="min-width:280px;height:660px;"
+        ></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================
+     FOOTER
+============================= -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <a href="#hero" class="footer-logo">Fateh<span>.</span></a>
+
+      <span class="footer-copy">
+        &copy; <span id="year"></span> Fateh Ali Aamir. Built with care.
+      </span>
+
+      <ul class="footer-links">
+        <li><a href="https://www.linkedin.com/in/fateh-ali-aamir/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/fatehaliaamir2100" target="_blank">GitHub</a></li>
+        <li><a href="mailto:fatehaliaamir2100@gmail.com">Email</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+<script src="js/app.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
 </html>
